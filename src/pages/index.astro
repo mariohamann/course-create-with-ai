@@ -5,29 +5,41 @@ import Header from '../components/Header.astro';
 ---
 
 <Layout title="Welcome to Astro.">
-	<main>
-    <Header />
-		<ul role="list" class="link-card-grid">
+  <Header />
+	<main class="max-w-screen-lg mx-auto px-4 md:px-12 md:py-20">
+    <h2 class="text-xl font-bold">
+      Explore a brave new world.</h2>
+      <p class="text-lg">
+This course teaches you to get the most of AI to empower independent site owners, developers and content providers.
+    </p>
 			<Card
-				href="https://docs.astro.build/"
-				title="Documentation"
-				body="Learn how Astro works and explore the official API docs."
-			/>
-			<Card
-				href="https://astro.build/integrations/"
-				title="Integrations"
-				body="Supercharge your project with new frameworks and libraries."
-			/>
-			<Card
-				href="https://astro.build/themes/"
-				title="Themes"
-				body="Explore a galaxy of community-built starter themes."
-			/>
-			<Card
-				href="https://astro.build/chat/"
-				title="Chat"
-				body="Come say hi to our amazing Discord community. ❤️"
-			/>
-		</ul>
+        title="Create designs"
+        body={[
+          'Learn about different creation tools and how to work with them',
+          'Deserunt id dolor dolor ullamco exercitation voluptate',
+          'Aliqua est ut quis'
+        ]}
+        image="design.jpg"
+        bgColor="bg-[#D66154]"
+      />
+      <Card
+        title="Create copy"
+        body={[
+          'Learn about different creation tools and how to work with them',
+          'Deserunt id dolor dolor ullamco exercitation voluptate',
+          'Aliqua est ut quis'
+        ]}
+        image="copy.jpg"
+        bgColor="bg-[#5A79AC]"
+        reverse={true}/>
+      <Card
+        title="Create code"
+        body={[
+          'Learn about different creation tools and how to work with them',
+          'Deserunt id dolor dolor ullamco exercitation voluptate',
+          'Aliqua est ut quis'
+        ]}
+        image="code.jpg"
+        bgColor="bg-[#758242]"/>
 	</main>
 </Layout>
