@@ -1,0 +1,27 @@
+---
+
+export interface Props {
+  prompt: string;
+  target: string;
+}
+
+const { prompt, target }: Props = Astro.props;
+---
+
+<style>
+      :root,
+			:host {
+				/* --sl-tooltip-arrow-size: 4px; */
+				--sl-z-index-tooltip: 1000;
+			}
+			sl-tooltip {
+				--show-delay: 0;
+				--hide-delay: 0;
+			}
+</style>
+
+
+<sl-tooltip placement="bottom-start" class="-ml-2">
+  <div slot="content" class="-ml-[10px] p-2 bg-black text-white font-mono text-sm"><b>Prompt for {target}</b>: {prompt}</div>
+  <slot/>
+</sl-tooltip>
