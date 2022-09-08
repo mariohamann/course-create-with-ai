@@ -1,51 +1,58 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Card from '../components/Card.astro';
-import Header from '../components/Header.astro';
+import Layout from "../layouts/Layout.astro";
+import Card from "../components/Card.astro";
+import Header from "../components/Header.astro";
 ---
 
-<Layout title="Welcome to Astro.">
-  <Header />
-	<main class="max-w-screen-lg mx-auto px-4 md:px-12 md:py-20">
-    <h2 class="text-xl font-bold">
-      Explore a brave new world.</h2>
-      <p class="text-lg">
-This course teaches you to get the most of AI to empower independent site owners, developers and content providers.
-    </p>
-			<Card
-        title="Designs"
-        body={[
-          'Learn about different creation tools and how to work with them',
-          'Deserunt id dolor dolor ullamco exercitation voluptate',
-          'Aliqua est ut quis'
-        ]}
-        image="design.jpg"
-        imageAlt="A robot eating brushs and pencils. Sketch in the style of Leonardo da Vinci."
-        textAlt="This is a course about how AI can be used to create website. Topics are 'How to create website designs with AI', 'How to create website copy with AI' and 'How to create web code with AI'. The course highlights and discusses oppportunities and threats for people like developers, content creators and designers."
-        bgColor="bg-[#D66154]"
-      />
-      <Card
-        title="Copy"
-        body={[
-          'Learn about different creation tools and how to work with them',
-          'Deserunt id dolor dolor ullamco exercitation voluptate',
-          'Aliqua est ut quis'
-        ]}
-        image="copy.jpg"
-        imageAlt="A robot eats a blue typewriter. Sketch in style of Leonardo da Vinci."
-        textAlt="This is a course about how AI can be used to create website. Topics are 'How to create website designs with AI', 'How to create website copy with AI' and 'How to create web code with AI'. The course highlights and discusses oppportunities and threats for people like developers, content creators and designers."
-        bgColor="bg-[#5A79AC]"
-        reverse={true}/>
-      <Card
-        title="Code"
-        body={[
-          'Learn about different creation tools and how to work with them',
-          'Deserunt id dolor dolor ullamco exercitation voluptate',
-          'Aliqua est ut quis'
-        ]}
-        image="code.jpg"
-        imageAlt="A green robot sits in front of computer and thinks about programming code. Old sketch in style of Leonardo da Vinci."
-        textAlt="This is a course about how AI can be used to create website. Topics are 'How to create website designs with AI', 'How to create website copy with AI' and 'How to create web code with AI'. The course highlights and discusses oppportunities and threats for people like developers, content creators and designers."
-        bgColor="bg-[#758242]"/>
+<Layout title='Welcome to Astro.'>
+	<Header />
+	<main class='max-w-screen-lg mx-auto px-4 md:px-12 pb-32'>
+		<Card
+			title='Design outside the box'
+			image='design.jpg'
+			imageAlt='A robot eating brushs and pencils. Sketch in the style of Leonardo da Vinci.'
+			textAlt='This course is for web designers and web developers. They learn how to create innovative and impressive web designs that really stick with the help of AI. In the course they will learn how to use this super power to use unique AI-generated illustrations and images to create innovative and eye-catching web designs.'
+			bgColor='bg-[#D66154]'
+		>
+			<p>
+				If you want to design an amazing website, don't just settle for
+				what you've seen everyone else do.
+			</p>
+			<p>
+				Dive into new techniques based on A.I. that will make your site
+				look like others haven't even thought of – including yourself.
+			</p>
+		</Card>
+		<Card
+			title='Tap into untouched creative potential'
+			image='copy.jpg'
+			imageAlt='A robot eats a blue typewriter. Sketch in style of Leonardo da Vinci.'
+			textAlt='This course is for web designers, web developers and copy writers. In the course they learn how to create copy texts that really stick with the help of AI. They will learn how to get great copy even with lacking creativity.'
+			bgColor='bg-[#5A79AC]'
+			reverse={true}
+		>
+			<p>
+				What are the 2 things that we wish for the most in life? We wish
+				for more wishes and we wish for someone else to write our texts
+				for us.
+			</p>
+			<p>With A.I. and this course, your wish will come true.</p>
+		</Card>
+		<Card
+			title='Code'
+			image='code.jpg'
+			imageAlt='A green robot sits in front of computer and thinks about programming code. Old sketch in style of Leonardo da Vinci.'
+			textAlt='A course for web designers, web developers. They learn how to programme website code or create even complete websites with the help of AI.'
+			bgColor='bg-[#758242]'
+		>
+			<p>
+				So there are a lot of frameworks and engines out there that can
+				help you code really fast, but is your business model for quick
+				development, or a sophisticated and dynamic one?
+			</p><p>
+				After this course you will be able to quickly create website
+				code yourself with the help of AI.
+			</p>
+		</Card>
 	</main>
 </Layout>

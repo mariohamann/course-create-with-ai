@@ -1,35 +1,64 @@
 ---
-
-
-import Tooltip from './Tooltip.astro';
+import Tooltip from "./Tooltip.astro";
 export interface Props {
 	title: string;
-  textAlt: string;
-  imageAlt: string;
-  body: string[];
-  image: string;
-  bgColor: string;
-  reverse?: boolean;
+	textAlt: string;
+	imageAlt: string;
+	body?: string[];
+	image: string;
+	bgColor: string;
+	reverse?: boolean;
 }
 
-const { title, body, image, bgColor, reverse, textAlt, imageAlt }: Props = Astro.props;
+const { title, body, image, bgColor, reverse, textAlt, imageAlt }: Props =
+	Astro.props;
 ---
 
-
-<div class={`flex flex-col sm:flex-row mt-20 relative ${reverse ? 'sm:flex-row-reverse' : ''}`}>
-  <div class="sm:w-1/2 bg-black  hover:z-10 focus-within:z-10">
-    <Tooltip prompt={imageAlt} target="Midjourney">
-      <img tabindex="0" src={image} alt={imageAlt} class="hover:outline focus:outline hover:outline-2 focus:outline-2 outline-offset-8"/>
-    </Tooltip>
-  </div>
-  <div class={`flex flex-col justify-center p-12 flex-1 ${bgColor}`}>
-    <h2 class="text-4xl font-bold text-left text-white">{title}</h2>
-    <Tooltip prompt={textAlt} target="copy.ai">
-      <ul tabindex="0" class="mt-4 list-disc ml-6 font-sans hover:outline-2 focus:outline-2 outline-offset-8 hover:outline focus:outline">
-        {body.map((text) => (
-          <li class="text-white">{text}</li>
-        ))}
-      </ul>
-    </Tooltip>
-  </div>
+<div class={`mt-96 md:mt-44 relative ${reverse ? "sm:flex-row-reverse" : ""}`}>
+	<div
+		class={`w-96 lg:w-1/2 absolute -translate-y-full md:translate-y-0 top-16 md:-top-16 ${
+			reverse
+				? "md:-left-8 lg:-left-16"
+				: "right-0 md:-right-8 lg:-right-16"
+		} lg:-top-16 bg-black hover:z-10 focus-within:z-10`}
+	>
+		<Tooltip prompt={imageAlt} target='Midjourney'>
+			<img
+				tabindex='0'
+				src={image}
+				alt={imageAlt}
+				class='hover:outline outline-black focus:outline hover:outline-2 focus:outline-2 outline-offset-8'
+			/>
+		</Tooltip>
+	</div>
+	<Tooltip prompt={textAlt} target='copy.ai'>
+		<div
+			tabindex='0'
+			class={` ${
+				reverse
+					? "mr-4 md:mr-0 ml-20 p-12 sm:p-16 sm:pt-28 md:ml-72 lg:ml-80 md:pl-32 lg:pr-40"
+					: "ml-4 md:ml-0 mr-20 p-12 sm:p-16 sm:pt-28 md:mr-72 lg:mr-80 md:pr-32 lg:pr-40"
+			} pt-28 flex flex-col justify-center md:p-20 flex-1 ${bgColor} hover:z-10 focus:z-10 hover:outline-2 outline-black focus:outline-2 outline-offset-8 hover:outline focus:outline`}
+		>
+			<h2
+				class='text-3xl md:text-4xl font-bold text-left text-white mb-8'
+			>
+				{title}
+			</h2>
+			<div
+				class='text-white text-base md:text-lg font-sans space-y-2 leading-relaxed'
+			>
+				<slot />
+				{
+					body && (
+						<ul class='list-disc ml-6'>
+							{body.map((text) => (
+								<li>{text}</li>
+							))}
+						</ul>
+					)
+				}
+			</div>
+		</div>
+	</Tooltip>
 </div>
