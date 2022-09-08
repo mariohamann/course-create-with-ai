@@ -2,44 +2,54 @@
 import Tooltip from "./Tooltip.astro";
 ---
 
-<div
-	class='relative shadow-xl h-[calc(100vh-6rem)] min-h-full md:h-[calc(100vh-9rem)]'
+<Tooltip
+	prompt='Colored robots making party. Sketch in style of Leonardo da Vinci.'
+	target='Midjourney'
 >
-	<div class='absolute inset-0'>
-		<img
-			class='h-full w-full object-cover object-right-bottom'
-			src='hero.jpg'
-			alt='People working on laptops'
-		/>
-		<div class='absolute inset-0 bg-gray-700 mix-blend-multiply opacity-60'>
-		</div>
-	</div>
 	<div
-		class='relative px-4 sm:px-6 pt-24 md:pt-0 lg:py-32 lg:px-8 max-w-screen-lg mx-auto h-full flex flex-col md:justify-center content-start'
+		class='relative shadow-xl h-[calc(100vh-6rem)] min-h-full md:h-[calc(100vh-9rem)]'
 	>
-		<Tooltip
-			prompt='This is a course about how AI can be used to create website. Topics are "How to create website designs with AI", "How to create website copy with AI" and "How to create web code with AI". The course highlights and discusses oppportunities and threats for people like developers, content creators and designers.'
-			target='copy.ai'
-		>
-			<h1
-				tabindex='0'
-				class='text-3xl sm:text-5xl lg:text-6xl font-black text-white mb-8 focus:outline-2 outline-black outline-offset-8 hover:outline outline-2 focus:outline md:w-1/2'
+		<div class='absolute inset-0'>
+			<img
+				class='h-full w-full object-cover object-right-bottom'
+				src='hero.jpg'
+				alt='People working on laptops'
+			/>
+			<div
+				class='absolute inset-0 bg-gray-700 mix-blend-multiply opacity-60'
 			>
-				Explore a <span class='font-black text-yellow-100'>brave</span>
-				<br />new world.
-			</h1>
-		</Tooltip>
-		<h2
-			class='text-xl sm:text-2xl lg:text-3xl text-white tracking-tight md:w-1/2'
+			</div>
+		</div>
+		<div
+			class='relative px-4 sm:px-6 pt-24 md:pt-0 lg:py-32 lg:px-8 max-w-screen-lg mx-auto h-full flex flex-col md:justify-center content-start'
 		>
-			Learn to create unique & eye-catching websites with the help of AI.
-		</h2>
-		<div class='mt-24'>
-			<a
-				href='#'
-				class='font-sans border border-transparent bg-black/20 hover:bg-black border-white px-4 py-3 text-base font-medium text-white shadow-sm sm:px-8'
-				>Book course &raquo;</a
+			<Tooltip
+				prompt='This is a course about how AI can be used to create website. Topics are "How to create website designs with AI", "How to create website copy with AI" and "How to create web code with AI". The course highlights and discusses oppportunities and threats for people like developers, content creators and designers.'
+				target='copy.ai'
 			>
+				<h1
+					tabindex='0'
+					class='text-3xl sm:text-5xl lg:text-6xl font-black text-white mb-8 focus:outline-2 outline-black outline-offset-8 hover:outline outline-2 focus:outline md:w-1/2'
+				>
+					Explore a <span class='font-black text-yellow-100'
+						>brave</span
+					>
+					<br />new world.
+				</h1>
+			</Tooltip>
+			<h2
+				class='text-xl sm:text-2xl lg:text-3xl text-white tracking-tight md:w-1/2'
+			>
+				Learn to create unique & eye-catching websites with the help of
+				AI.
+			</h2>
+			<div class='mt-24'>
+				<a
+					href='#'
+					class='font-sans border border-transparent bg-black/20 hover:bg-black border-white px-4 py-3 text-base font-medium text-white shadow-sm sm:px-8'
+					>Book course &raquo;</a
+				>
+			</div>
 		</div>
 	</div>
-</div>
+</Tooltip>

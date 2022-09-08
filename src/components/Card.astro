@@ -18,8 +18,8 @@ const { title, body, image, bgColor, reverse, textAlt, imageAlt }: Props =
 	<div
 		class={`w-full md:w-96 lg:w-1/2 absolute -translate-y-full md:translate-y-0 top-16 md:-top-16 ${
 			reverse
-				? "-right-4 md:-left-8 lg:-left-16"
-				: "-left-4 md:-right-8 lg:-right-16"
+				? "-right-4 md:right-auto md:-left-8 lg:-left-16"
+				: "-left-4 md:left-auto md:-right-8 lg:-right-16"
 		} lg:-top-16 bg-black hover:z-10 focus-within:z-10`}
 	>
 		<Tooltip prompt={imageAlt} target='Midjourney'>
