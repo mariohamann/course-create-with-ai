@@ -14,12 +14,12 @@ const { title, body, image, bgColor, reverse, textAlt, imageAlt }: Props =
 	Astro.props;
 ---
 
-<div class={`mt-96 md:mt-44 relative ${reverse ? "sm:flex-row-reverse" : ""}`}>
+<div class={`mt-96 md:mt-44 relative ${reverse ? "" : ""}`}>
 	<div
-		class={`w-96 lg:w-1/2 absolute -translate-y-full md:translate-y-0 top-16 md:-top-16 ${
+		class={`w-full md:w-96 lg:w-1/2 absolute -translate-y-full md:translate-y-0 top-16 md:-top-16 ${
 			reverse
-				? "md:-left-8 lg:-left-16"
-				: "right-0 md:-right-8 lg:-right-16"
+				? "-right-4 md:-left-8 lg:-left-16"
+				: "-left-4 md:-right-8 lg:-right-16"
 		} lg:-top-16 bg-black hover:z-10 focus-within:z-10`}
 	>
 		<Tooltip prompt={imageAlt} target='Midjourney'>
@@ -36,8 +36,8 @@ const { title, body, image, bgColor, reverse, textAlt, imageAlt }: Props =
 			tabindex='0'
 			class={` ${
 				reverse
-					? "mr-4 md:mr-0 ml-20 p-12 sm:p-16 sm:pt-28 md:ml-72 lg:ml-80 md:pl-32 lg:pr-40"
-					: "ml-4 md:ml-0 mr-20 p-12 sm:p-16 sm:pt-28 md:mr-72 lg:mr-80 md:pr-32 lg:pr-40"
+					? "mr-4 md:mr-0 -ml-4 sm:ml-20 p-12 sm:p-16 sm:pt-28 md:ml-72 lg:ml-80 md:pl-32 lg:pr-40"
+					: "ml-4 md:ml-0 -mr-4 sm:mr-20 p-12 sm:p-16 sm:pt-28 md:mr-72 lg:mr-80 md:pr-32 lg:pr-40"
 			} pt-28 flex flex-col justify-center md:p-20 flex-1 ${bgColor} hover:z-10 focus:z-10 hover:outline-2 outline-black focus:outline-2 outline-offset-8 hover:outline focus:outline`}
 		>
 			<h2
