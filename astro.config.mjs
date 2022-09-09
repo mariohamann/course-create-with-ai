@@ -5,5 +5,5 @@ import tailwind from "@astrojs/tailwind";
 // https://astro.build/config
 export default defineConfig({
   integrations: [tailwind()],
-  site: 'https://mariohamann.github.io/course-create-with-ai'
+  site: 'https://create-with-ai.com'
 });
